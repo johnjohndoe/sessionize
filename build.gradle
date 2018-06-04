@@ -1,0 +1,23 @@
+import info.metadude.kotlin.library.sessionize.GradlePlugins
+
+apply plugin: "com.github.ben-manes.versions"
+
+buildscript {
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath GradlePlugins.gradleBintray
+        classpath GradlePlugins.gradleVersions
+        classpath GradlePlugins.kotlinGradle
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
