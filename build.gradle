@@ -1,6 +1,6 @@
 import info.metadude.kotlin.library.sessionize.GradlePlugins
 
-apply plugin: "com.github.ben-manes.versions"
+apply from: "gradle/gradle-versions.gradle"
 
 buildscript {
 
