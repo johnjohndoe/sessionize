@@ -6,7 +6,7 @@ object Versions {
     val assertjCore = "3.10.0"
     val gradleBintray = "1.8.4"
     val gradleVersions = "0.21.0"
-    val junitJupiter = "5.3.1"
+    val junitJupiter = "5.4.2"
     val kotlin = "1.3.40"
     val kotlinCoroutinesRetrofit = "1.1.0"
     val moshi = "1.8.0"
