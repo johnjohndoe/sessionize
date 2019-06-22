@@ -12,7 +12,7 @@ object Versions {
     val moshi = "1.6.0"
     val okhttp = "3.11.0"
     val retrofit = "2.4.0"
-    val threetenbp = "1.3.7"
+    val threetenbp = "1.4.0"
 }
 
 object GradlePlugins {
