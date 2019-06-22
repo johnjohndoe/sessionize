@@ -1,37 +1,35 @@
-@file:Suppress("MayBeConstant")
-
 package info.metadude.kotlin.library.sessionize
 
 object Versions {
-    val assertjCore = "3.10.0"
-    val gradleBintray = "1.8.4"
-    val gradleVersions = "0.21.0"
-    val junitJupiter = "5.4.2"
-    val kotlin = "1.3.40"
-    val kotlinCoroutinesRetrofit = "1.1.0"
-    val moshi = "1.8.0"
-    val okhttp = "3.12.3"
-    val retrofit = "2.6.0"
-    val threetenbp = "1.4.0"
+    const val assertjCore = "3.10.0"
+    const val gradleBintray = "1.8.4"
+    const val gradleVersions = "0.21.0"
+    const val junitJupiter = "5.4.2"
+    const val kotlin = "1.3.40"
+    const val kotlinCoroutinesRetrofit = "1.1.0"
+    const val moshi = "1.8.0"
+    const val okhttp = "3.12.3"
+    const val retrofit = "2.6.0"
+    const val threetenbp = "1.4.0"
 }
 
 object GradlePlugins {
-    val gradleBintray = "com.jfrog.bintray.gradle:gradle-bintray-plugin:${Versions.gradleBintray}"
-    val gradleVersions = "com.github.ben-manes:gradle-versions-plugin:${Versions.gradleVersions}"
-    val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
+    const val gradleBintray = "com.jfrog.bintray.gradle:gradle-bintray-plugin:${Versions.gradleBintray}"
+    const val gradleVersions = "com.github.ben-manes:gradle-versions-plugin:${Versions.gradleVersions}"
+    const val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
 }
 
 object Libs {
-    val assertjCore = "org.assertj:assertj-core:${Versions.assertjCore}"
-    val junitJupiterApi = "org.junit.jupiter:junit-jupiter-api:${Versions.junitJupiter}"
-    val junitJupiterEngine = "org.junit.jupiter:junit-jupiter-engine:${Versions.junitJupiter}"
-    val kotlinCoroutinesRetrofit = "ru.gildor.coroutines:kotlin-coroutines-retrofit:${Versions.kotlinCoroutinesRetrofit}"
-    val kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
-    val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
-    val moshiKotlinCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
-    val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
-    val okhttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
-    val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-    val retrofitMoshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
-    val threetenbp = "org.threeten:threetenbp:${Versions.threetenbp}"
+    const val assertjCore = "org.assertj:assertj-core:${Versions.assertjCore}"
+    const val junitJupiterApi = "org.junit.jupiter:junit-jupiter-api:${Versions.junitJupiter}"
+    const val junitJupiterEngine = "org.junit.jupiter:junit-jupiter-engine:${Versions.junitJupiter}"
+    const val kotlinCoroutinesRetrofit = "ru.gildor.coroutines:kotlin-coroutines-retrofit:${Versions.kotlinCoroutinesRetrofit}"
+    const val kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
+    const val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
+    const val moshiKotlinCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
+    const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
+    const val okhttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val retrofitMoshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
+    const val threetenbp = "org.threeten:threetenbp:${Versions.threetenbp}"
 }
