@@ -9,9 +9,9 @@ object Versions {
     val junitJupiter = "5.3.1"
     val kotlin = "1.2.51"
     val kotlinCoroutinesRetrofit = "0.12.0"
-    val moshi = "1.6.0"
     val okhttp = "3.11.0"
     val retrofit = "2.4.0"
+    val moshi = "1.8.0"
     val threetenbp = "1.4.0"
 }
 
