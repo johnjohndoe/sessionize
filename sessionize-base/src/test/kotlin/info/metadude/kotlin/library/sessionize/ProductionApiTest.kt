@@ -1,7 +1,7 @@
 import info.metadude.kotlin.library.sessionize.ApiModule
 import info.metadude.kotlin.library.sessionize.SessionizeService
 import info.metadude.kotlin.library.sessionize.gridtable.models.*
-import kotlinx.coroutines.experimental.runBlocking
+import kotlinx.coroutines.runBlocking
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.assertj.core.api.Assertions.assertThat
