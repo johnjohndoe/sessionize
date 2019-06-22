@@ -5,7 +5,7 @@ package info.metadude.kotlin.library.sessionize
 object Versions {
     val assertjCore = "3.10.0"
     val gradleBintray = "1.8.4"
-    val gradleVersions = "0.20.0"
+    val gradleVersions = "0.21.0"
     val junitJupiter = "5.3.1"
     val kotlin = "1.2.51"
     val kotlinCoroutinesRetrofit = "0.12.0"
