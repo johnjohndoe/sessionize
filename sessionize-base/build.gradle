@@ -10,12 +10,6 @@ compileJava {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
-kotlin {
-    experimental {
-        coroutines "enable"
-    }
-}
-
 idea {
     module {
         sourceDirs += file("build/generated/source/kapt/main")

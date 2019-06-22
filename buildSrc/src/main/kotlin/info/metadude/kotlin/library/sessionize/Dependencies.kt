@@ -7,7 +7,7 @@ object Versions {
     val gradleBintray = "1.8.4"
     val gradleVersions = "0.21.0"
     val junitJupiter = "5.3.1"
-    val kotlin = "1.2.51"
+    val kotlin = "1.3.40"
     val kotlinCoroutinesRetrofit = "0.12.0"
     val moshi = "1.8.0"
     val okhttp = "3.12.3"
