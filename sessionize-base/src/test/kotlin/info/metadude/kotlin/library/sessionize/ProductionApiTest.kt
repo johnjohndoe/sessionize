@@ -1,5 +1,5 @@
-import info.metadude.kotlin.library.sessionize.ApiModule
-import info.metadude.kotlin.library.sessionize.SessionizeService
+package info.metadude.kotlin.library.sessionize
+
 import info.metadude.kotlin.library.sessionize.gridtable.models.*
 import kotlinx.coroutines.runBlocking
 import okhttp3.OkHttpClient
