@@ -1,6 +1,6 @@
 package info.metadude.kotlin.library.sessionize
 
-private const val kotlinVersion = "1.3.40"
+private const val kotlinVersion = "1.3.50"
 
 object GradlePlugins {
 
