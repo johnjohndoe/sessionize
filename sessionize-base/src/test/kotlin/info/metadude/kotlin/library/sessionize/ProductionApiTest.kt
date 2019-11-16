@@ -17,19 +17,21 @@ class ProductionApiTest {
     }
 
     @Test
-    fun `Validates a conference days response`() = runBlocking {
-        try {
-            val response = service.getConferenceDays(API_KEY).awaitResponse()
-            if (response.isSuccessful) {
-                val conferenceDays = response.body()
-                assertNotNull(conferenceDays)
-                conferenceDays?.forEach {
-                    assertNotNull(it)
-                    assertConferenceDay(it)
+    fun `Validates a conference days response`() {
+        runBlocking {
+            try {
+                val response = service.getConferenceDays(API_KEY).awaitResponse()
+                if (response.isSuccessful) {
+                    val conferenceDays = response.body()
+                    assertNotNull(conferenceDays)
+                    conferenceDays?.forEach {
+                        assertNotNull(it)
+                        assertConferenceDay(it)
+                    }
                 }
+            } catch (t: Throwable) {
+                fail<Nothing>("Should not throw $t")
             }
-        } catch (t: Throwable) {
-            fail("Should not throw $t")
         }
     }
 
