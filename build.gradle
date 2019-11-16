@@ -5,8 +5,8 @@ apply from: "gradle/gradle-versions.gradle"
 buildscript {
 
     repositories {
-        jcenter()
         mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath GradlePlugins.gradleBintray
@@ -17,7 +17,7 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
         mavenCentral()
+        jcenter()
     }
 }
