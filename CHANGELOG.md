@@ -1,5 +1,21 @@
 # Sessionize changelog
 
+## [v.3.0.0](https://github.com/johnjohndoe/sessionize/releases/tag/v.3.0.0)
+
+* Published: 2019-11-21
+
+### Changes
+
+* Use assertj-core v.3.14.0.
+* Use kotlin v.1.3.50.
+* Use moshi v.1.9.1.
+* Use retrofit v.2.6.2.
+* Use okhttp v.3.12.5.
+* Use junit-jupiter v.5.5.2.
+* Use Gradle wrapper v.5.6.4.
+* Use gradle-versions-plugin v.0.27.0.
+
+
 ## [v.2.0.0](https://github.com/johnjohndoe/sessionize/releases/tag/v.2.0.0)
 
 * Published: 2018-06-23
