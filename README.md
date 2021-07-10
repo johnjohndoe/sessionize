@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/johnjohndoe/sessionize.svg?branch=master)](https://travis-ci.org/johnjohndoe/sessionize) [![Download](https://api.bintray.com/packages/tbsprs/maven/sessionize/images/download.svg)](https://bintray.com/tbsprs/maven/sessionize/_latestVersion) [![Apache License](http://img.shields.io/badge/license-Apache%20License%202.0-lightgrey.svg)](http://choosealicense.com/licenses/apache-2.0/) [![JitPack](https://jitpack.io/v/johnjohndoe/sessionize.svg)][jitpack-sessionize]
+[![Build Status](https://travis-ci.org/johnjohndoe/sessionize.svg?branch=master)](https://travis-ci.org/johnjohndoe/sessionize) [![Apache License](http://img.shields.io/badge/license-Apache%20License%202.0-lightgrey.svg)](http://choosealicense.com/licenses/apache-2.0/) [![JitPack](https://jitpack.io/v/johnjohndoe/sessionize.svg)][jitpack-sessionize]
 
 # Sessionize library
 
@@ -21,7 +21,6 @@ your top level `build.gradle`:
 ```
 allprojects {
     repositories {
-        jcenter()
         mavenLocal()
     }
 }
