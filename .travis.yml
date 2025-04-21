@@ -1,9 +1,9 @@
-dist: trusty
+dist: focal
 
 language: java
 
 jdk:
-  - oraclejdk8
+  - openjdk17
 
 notifications:
   email: true
@@ -23,8 +23,3 @@ before_script:
 
 script:
   - ./gradlew clean assemble test
-
-addons:
-  # Fix OpenJDK builds
-  # https://github.com/travis-ci/travis-ci/issues/5227
-  hostname: short-hostname

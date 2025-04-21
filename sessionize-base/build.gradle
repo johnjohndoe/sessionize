@@ -2,35 +2,34 @@ import info.metadude.kotlin.library.sessionize.Libs
 
 apply plugin: "java-library"
 apply plugin: "kotlin"
-apply plugin: "kotlin-kapt"
+apply plugin: "com.google.devtools.ksp"
 apply plugin: "idea"
 
 compileJava {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 idea {
     module {
-        sourceDirs += file("build/generated/source/kapt/main")
-        generatedSourceDirs += file("build/generated/source/kapt/main")
+        sourceDirs += file("build/generated/source/ksp/main")
+        generatedSourceDirs += file("build/generated/source/ksp/main")
     }
 }
 
 dependencies {
-    compile Libs.kotlinStdlib
-    compile Libs.moshi
-    kapt Libs.moshiKotlinCodegen
-    compile Libs.okhttp
-    compile Libs.okhttpLoggingInterceptor
-    compile Libs.retrofit
-    compile Libs.retrofitMoshi
+    implementation Libs.moshi
+    ksp Libs.moshiKotlinCodegen
+    implementation Libs.okhttp
+    implementation Libs.okhttpLoggingInterceptor
+    implementation Libs.retrofit
+    implementation Libs.retrofitMoshi
     api Libs.threetenbp
 
-    testCompile Libs.assertjCore
-    testCompile Libs.junitJupiterApi
-    testRuntime Libs.junitJupiterEngine
-    testCompile Libs.kotlinCoroutinesRetrofit
+    testImplementation Libs.assertjCore
+    testImplementation Libs.junitJupiterApi
+    testRuntimeOnly Libs.junitJupiterEngine
+    testImplementation Libs.kotlinCoroutinesRetrofit
 }
 
 test {

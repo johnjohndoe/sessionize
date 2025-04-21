@@ -6,6 +6,13 @@
 
 ### Changes
 
+* **Breaking changes:** Update project setup.
+  * Target JDK 17.
+  * Use gradle:8.13.
+  * Use kotlin:2.1.20.
+  * Use ksp:2.1.20-2.0.0.
+  * Use moshi:1.15.2.
+  * Use gradle-versions-plugin:0.52.0.
 * Remove jcenter/bintray deployment.
 
 

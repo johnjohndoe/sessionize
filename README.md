@@ -31,7 +31,7 @@ and to your application module `build.gradle`:
 
 ```groovy
 dependencies {
-    compile "info.metadude.kotlin.library.sessionize:sessionize-base:$version"
+    implementation "info.metadude.kotlin.library.sessionize:sessionize-base:$version"
 }
 ```
 
