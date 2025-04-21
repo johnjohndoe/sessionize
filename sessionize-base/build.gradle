@@ -29,6 +29,7 @@ dependencies {
     testImplementation Libs.assertjCore
     testImplementation Libs.junitJupiterApi
     testRuntimeOnly Libs.junitJupiterEngine
+    testRuntimeOnly Libs.junitPlatformLauncher
     testImplementation Libs.kotlinCoroutinesRetrofit
 }
 

@@ -18,7 +18,8 @@ object Libs {
 
     private object Versions {
         const val assertjCore = "3.27.3"
-        const val junitJupiter = "5.5.2"
+        const val junitJupiter = "5.12.2"
+        const val junitPlatformLauncher = "1.12.2"
         const val kotlinCoroutinesRetrofit = "1.1.0"
         const val moshi = "1.15.2"
         const val okhttp = "4.12.0"
@@ -29,6 +30,7 @@ object Libs {
     const val assertjCore = "org.assertj:assertj-core:${Versions.assertjCore}"
     const val junitJupiterApi = "org.junit.jupiter:junit-jupiter-api:${Versions.junitJupiter}"
     const val junitJupiterEngine = "org.junit.jupiter:junit-jupiter-engine:${Versions.junitJupiter}"
+    const val junitPlatformLauncher = "org.junit.platform:junit-platform-launcher:${Versions.junitPlatformLauncher}"
     const val kotlinCoroutinesRetrofit = "ru.gildor.coroutines:kotlin-coroutines-retrofit:${Versions.kotlinCoroutinesRetrofit}"
     const val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
     const val moshiKotlinCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
