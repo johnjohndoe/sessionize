@@ -17,7 +17,7 @@ object GradlePlugins {
 object Libs {
 
     private object Versions {
-        const val assertjCore = "3.14.0"
+        const val assertjCore = "3.27.3"
         const val junitJupiter = "5.5.2"
         const val kotlinCoroutinesRetrofit = "1.1.0"
         const val moshi = "1.15.2"
