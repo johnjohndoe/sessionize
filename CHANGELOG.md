@@ -6,6 +6,7 @@
 
 ### Changes
 
+* Use okhttp:4.12.0.
 * Use threetenbp:1.4.0.
 * **Breaking changes:** Update project setup.
   * Target JDK 17.
