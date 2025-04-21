@@ -5,11 +5,9 @@ private const val kotlinVersion = "1.3.50"
 object GradlePlugins {
 
     private object Versions {
-        const val gradleBintray = "1.8.4"
         const val gradleVersions = "0.27.0"
     }
 
-    const val gradleBintray = "com.jfrog.bintray.gradle:gradle-bintray-plugin:${Versions.gradleBintray}"
     const val gradleVersions = "com.github.ben-manes:gradle-versions-plugin:${Versions.gradleVersions}"
     const val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
 }

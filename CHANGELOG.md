@@ -1,5 +1,14 @@
 # Sessionize changelog
 
+## NEXT
+
+* Not published yet.
+
+### Changes
+
+* Remove jcenter/bintray deployment.
+
+
 ## [v.3.0.0](https://github.com/johnjohndoe/sessionize/releases/tag/v.3.0.0)
 
 * Published: 2019-11-21
