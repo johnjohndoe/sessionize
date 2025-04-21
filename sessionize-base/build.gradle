@@ -1,4 +1,6 @@
 import info.metadude.kotlin.library.sessionize.Libs
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 apply plugin: "java-library"
 apply plugin: "kotlin"
@@ -36,7 +38,15 @@ dependencies {
 test {
     useJUnitPlatform()
     testLogging {
-        events "failed", "passed", "skipped"
+        events TestLogEvent.FAILED,
+                TestLogEvent.PASSED,
+                TestLogEvent.SKIPPED,
+                TestLogEvent.STANDARD_ERROR,
+                TestLogEvent.STANDARD_OUT
+        exceptionFormat TestExceptionFormat.FULL
+        showCauses true
+        showExceptions true
+        showStackTraces true
     }
 }
 
