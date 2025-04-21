@@ -22,7 +22,7 @@ object Libs {
         const val kotlinCoroutinesRetrofit = "1.1.0"
         const val moshi = "1.15.2"
         const val okhttp = "4.12.0"
-        const val retrofit = "2.6.2"
+        const val retrofit = "2.11.0"
         const val threetenbp = "1.7.1"
     }
 
