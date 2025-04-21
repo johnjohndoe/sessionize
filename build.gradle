@@ -5,6 +5,7 @@ apply from: "gradle/gradle-versions.gradle"
 buildscript {
 
     repositories {
+        gradlePluginPortal()
         mavenCentral()
         jcenter()
     }
