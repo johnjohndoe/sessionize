@@ -6,6 +6,7 @@
 
 ### Changes
 
+* Use threetenbp:1.4.0.
 * **Breaking changes:** Update project setup.
   * Target JDK 17.
   * Use gradle:8.13.

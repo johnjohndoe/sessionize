@@ -23,7 +23,7 @@ object Libs {
         const val moshi = "1.15.2"
         const val okhttp = "3.12.5"
         const val retrofit = "2.6.2"
-        const val threetenbp = "1.4.0"
+        const val threetenbp = "1.7.1"
     }
 
     const val assertjCore = "org.assertj:assertj-core:${Versions.assertjCore}"
