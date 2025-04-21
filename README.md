@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/johnjohndoe/sessionize.svg?branch=master)](https://travis-ci.com/johnjohndoe/sessionize) [![Apache License](http://img.shields.io/badge/license-Apache%20License%202.0-lightgrey.svg)](http://choosealicense.com/licenses/apache-2.0/) [![JitPack](https://jitpack.io/v/johnjohndoe/sessionize.svg)][jitpack-sessionize]
+[![Build Status](https://app.travis-ci.com/johnjohndoe/sessionize.svg?token=UPoEhXykQ9pcGiExgqsH&branch=master)](https://app.travis-ci.com/johnjohndoe/sessionize) [![Apache License](http://img.shields.io/badge/license-Apache%20License%202.0-lightgrey.svg)](http://choosealicense.com/licenses/apache-2.0/) [![JitPack](https://jitpack.io/v/johnjohndoe/sessionize.svg)][jitpack-sessionize]
 
 # Sessionize library
 
