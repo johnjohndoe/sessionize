@@ -6,6 +6,9 @@
 
 ### Changes
 
+* **Breaking change:** Let `SessionizeService#getConferenceDays` return `Response<List<ConferenceDay>>`.
+  * Add `eTag` and `lastModifiedAt` parameters.
+  * Expose `retrofit2.Response` in library API.
 * Add maven central deployment via `com.vanniktech.maven.publish` plugin.
 * Use retrofit:2.11.0.
 * Use okhttp:4.12.0.

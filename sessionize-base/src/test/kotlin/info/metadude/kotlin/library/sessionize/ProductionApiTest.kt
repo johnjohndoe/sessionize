@@ -1,13 +1,12 @@
 package info.metadude.kotlin.library.sessionize
 
 import info.metadude.kotlin.library.sessionize.gridtable.models.*
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.assertj.core.api.Assertions.assertThat
 import org.assertj.core.api.Assertions.fail
 import org.junit.jupiter.api.Test
-import ru.gildor.coroutines.retrofit.awaitResponse
 
 class ProductionApiTest {
 
@@ -17,21 +16,22 @@ class ProductionApiTest {
     }
 
     @Test
-    fun `Validates a conference days response`() {
-        runBlocking {
-            try {
-                val response = service.getConferenceDays(API_KEY).awaitResponse()
-                if (response.isSuccessful) {
+    fun `getConferenceDays responds successfully`() = runTest {
+        try {
+            val response = service.getConferenceDays(eTag = "", lastModifiedAt = "", API_KEY)
+            when (response.isSuccessful) {
+                true -> {
                     val conferenceDays = response.body()
-                    assertNotNull(conferenceDays)
-                    conferenceDays?.forEach {
-                        assertNotNull(it)
-                        assertConferenceDay(it)
-                    }
+                    assertThat(conferenceDays).isNotNull
+                    conferenceDays?.forEach { assertConferenceDay(it) }
                 }
-            } catch (t: Throwable) {
-                fail<Nothing>("Should not throw $t")
+
+                false -> {
+                    fail("Request failed with code ${response.code()}: ${response.message()}")
+                }
             }
+        } catch (t: Throwable) {
+            fail("Should not throw $t")
         }
     }
 

@@ -21,11 +21,12 @@ idea {
 }
 
 dependencies {
+    implementation Libs.kotlinCoroutinesCore
     implementation Libs.moshi
     ksp Libs.moshiKotlinCodegen
     implementation Libs.okhttp
     implementation Libs.okhttpLoggingInterceptor
-    implementation Libs.retrofit
+    api Libs.retrofit
     implementation Libs.retrofitMoshi
     api Libs.threetenbp
 
@@ -33,7 +34,7 @@ dependencies {
     testImplementation Libs.junitJupiterApi
     testRuntimeOnly Libs.junitJupiterEngine
     testRuntimeOnly Libs.junitPlatformLauncher
-    testImplementation Libs.kotlinCoroutinesRetrofit
+    testImplementation Libs.kotlinCoroutinesTest
 }
 
 test {
