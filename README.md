@@ -6,6 +6,78 @@ A Kotlin library containing a parser and models for the Sessionize API:
 
 * https://sessionize.com/api-documentation
 
+### Usage
+
+The library is published as two separate artifacts: `sessionize-base` and `sessionize-repositories`.
+You can use either of them depending on your needs.
+
+#### Usage of `sessionize-base`
+
+The `sessionize-base` artifact returns a `Response<List<ConferenceDay>>` type
+from the suspending `SessionizeService#getConferenceDays` function.
+
+```kotlin
+val api: SessionizeApi = Api
+val service: SessionizeService = api.provideSessionizeService(
+    baseUrl = "https://sessionize.com",
+    callFactory = okHttpClient,
+)
+
+val requestETag = "" // Pass an empty string or a previous ETag value for caching
+val requestLastModifiedAt = "" // Pass an empty string or a previous Last-Modified value for caching
+val response = service.getConferenceDays(
+    eTag = requestETag,
+    lastModifiedAt = requestLastModifiedAt,
+    apiKey = "some_api_key",
+)
+
+if (response.isSuccessful) {
+    val conferenceDays = response.body()
+    val responseETag = response.headers()["ETag"]
+    val responseLastModifiedAt = response.headers()["Last-Modified"]
+} else {
+    val errorCode = response.code()
+    val errorMessage = response.message()
+}
+```
+
+#### Usage of `sessionize-repositories`
+
+The `sessionize-repositories` artifact returns a `Flow<GetConferenceDaysState>` type
+from the suspending `SessionizeRepository#getConferenceDaysState` function.
+
+```kotlin
+val repository: SessionizeRepository = SimpleSessionizeRepository(
+    baseUrl = "https://sessionize.com",
+    apiKey = "some_api_key",
+    callFactory = okHttpClient,
+    api = Api,
+)
+
+val requestETag = "" // Pass an empty string or a previous ETag value for caching
+val requestLastModifiedAt = "" // Pass an empty string or a previous Last-Modified value for caching
+repository.getConferenceDaysState(
+    requestETag = requestETag,
+    lastModifiedAt = requestLastModifiedAt,
+)
+.collectLatest { state: GetConferenceDaysState ->
+    when (state) {
+        is Success -> {
+            val conferenceDays = state.conferenceDays
+            val responseETag = state.responseETag
+            val responseLastModifiedAt = state.responseLastModifiedAt
+        }
+        is Error -> {
+            val httpStatusCode = state.httpStatusCode
+            val errorMessage = state.errorMessage
+        }
+        is Failure -> {
+            val throwable = state.throwable
+        }
+    }
+}
+```
+
 
 ### Gradle build
 

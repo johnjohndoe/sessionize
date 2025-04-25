@@ -1,3 +1,4 @@
 rootProject.name = "sessionize"
 
 include ":sessionize-base"
+include ":sessionize-repositories"

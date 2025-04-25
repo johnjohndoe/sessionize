@@ -6,6 +6,7 @@
 
 ### Changes
 
+* **New:** Add `SimpleSessionizeRepository` in separate "sessionize-repositories" library artifact.
 * **Breaking changes:**
   * Rename `ApiModule` to `Api`.
   * Change `Api#provideSessionizeService` parameter from `callFactory: Call.Factory` to `okHttpClient: OkHttpClient`.

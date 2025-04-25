@@ -1,0 +1,41 @@
+import info.metadude.kotlin.library.sessionize.Libs
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
+apply plugin: "java-library"
+apply plugin: "kotlin"
+apply plugin: "com.vanniktech.maven.publish"
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+dependencies {
+    api(project(":sessionize-base"))
+    api Libs.kotlinCoroutinesCore
+    api Libs.okhttp
+
+    testImplementation Libs.assertjCore
+    testImplementation Libs.junitJupiterApi
+    testRuntimeOnly Libs.junitJupiterEngine
+    testRuntimeOnly Libs.junitPlatformLauncher
+    testImplementation Libs.kotlinCoroutinesTest
+    testImplementation Libs.mockitoKotlin
+    testImplementation Libs.turbine
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events TestLogEvent.FAILED,
+                TestLogEvent.PASSED,
+                TestLogEvent.SKIPPED,
+                TestLogEvent.STANDARD_ERROR,
+                TestLogEvent.STANDARD_OUT
+        exceptionFormat TestExceptionFormat.FULL
+        showCauses true
+        showExceptions true
+        showStackTraces true
+    }
+}
