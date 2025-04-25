@@ -13,18 +13,18 @@ object Api : SessionizeApi {
         return createRetrofit(baseUrl, callFactory).create(SessionizeService::class.java)
     }
 
-    private fun provideMoshiBuilder(): Moshi {
-        return Moshi.Builder()
-                .add(LocalDateTimeAdapter())
-                .build()
-    }
-
     private fun createRetrofit(baseUrl: String, callFactory: Call.Factory): Retrofit {
         return Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addConverterFactory(MoshiConverterFactory.create(provideMoshiBuilder()))
                 .callFactory(callFactory)
                 .build()
+    }
+
+    private fun provideMoshiBuilder(): Moshi {
+        return Moshi.Builder()
+            .add(LocalDateTimeAdapter())
+            .build()
     }
 
 }
