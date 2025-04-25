@@ -7,11 +7,13 @@ object GradlePlugins {
     private object Versions {
         const val gradleVersions = "0.52.0"
         const val ksp = "2.1.20-2.0.1"
+        const val mavenPublish = "0.31.0"
     }
 
     const val gradleVersions = "com.github.ben-manes:gradle-versions-plugin:${Versions.gradleVersions}"
     const val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     const val ksp = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:${Versions.ksp}"
+    const val mavenPublish = "com.vanniktech.maven.publish:com.vanniktech.maven.publish.gradle.plugin:${Versions.mavenPublish}"
 }
 
 object Libs {

@@ -6,6 +6,7 @@
 
 ### Changes
 
+* Add maven central deployment via `com.vanniktech.maven.publish` plugin.
 * Use retrofit:2.11.0.
 * Use okhttp:4.12.0.
 * Use threetenbp:1.4.0.

@@ -12,6 +12,7 @@ buildscript {
         classpath GradlePlugins.gradleVersions
         classpath GradlePlugins.kotlinGradle
         classpath GradlePlugins.ksp
+        classpath GradlePlugins.mavenPublish
     }
 }
 
