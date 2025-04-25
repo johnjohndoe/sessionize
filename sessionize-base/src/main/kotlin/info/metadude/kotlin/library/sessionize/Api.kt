@@ -2,15 +2,16 @@ package info.metadude.kotlin.library.sessionize
 
 import com.squareup.moshi.Moshi
 import info.metadude.kotlin.library.sessionize.adapters.LocalDateTimeAdapter
-import okhttp3.OkHttpClient
+import okhttp3.Call
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
-object ApiModule {
+object Api : SessionizeApi {
 
-    @JvmStatic
-    fun provideSessionizeService(baseUrl: String, okHttpClient: OkHttpClient): SessionizeService =
-            createRetrofit(baseUrl, okHttpClient).create(SessionizeService::class.java)
+    override fun provideSessionizeService(baseUrl: String, callFactory: Call.Factory): SessionizeService {
+        require(baseUrl.isNotEmpty()) { "baseUrl is empty." }
+        return createRetrofit(baseUrl, callFactory).create(SessionizeService::class.java)
+    }
 
     private fun provideMoshiBuilder(): Moshi {
         return Moshi.Builder()
@@ -18,11 +19,11 @@ object ApiModule {
                 .build()
     }
 
-    private fun createRetrofit(baseUrl: String, okHttpClient: OkHttpClient): Retrofit {
+    private fun createRetrofit(baseUrl: String, callFactory: Call.Factory): Retrofit {
         return Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addConverterFactory(MoshiConverterFactory.create(provideMoshiBuilder()))
-                .client(okHttpClient)
+                .callFactory(callFactory)
                 .build()
     }
 

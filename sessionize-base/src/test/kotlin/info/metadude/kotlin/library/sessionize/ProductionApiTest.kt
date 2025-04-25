@@ -128,7 +128,7 @@ class ProductionApiTest {
         val okHttpClient = OkHttpClient.Builder()
                 .addNetworkInterceptor(interceptor)
                 .build()
-        ApiModule.provideSessionizeService(BASE_URL, okHttpClient)
+        Api.provideSessionizeService(BASE_URL, okHttpClient)
     }
 
 }

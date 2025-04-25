@@ -6,6 +6,11 @@
 
 ### Changes
 
+* **Breaking changes:**
+  * Rename `ApiModule` to `Api`.
+  * Change `Api#provideSessionizeService` parameter from `callFactory: Call.Factory` to `okHttpClient: OkHttpClient`.
+  * Add `SessionizeApi` interface to `Api` to ease testing.
+  * Require `baseUrl` parameter in `Api#provideSessionizeService` not to be empty string.
 * **Breaking change:** Let `SessionizeService#getConferenceDays` return `Response<List<ConferenceDay>>`.
   * Add `eTag` and `lastModifiedAt` parameters.
   * Expose `retrofit2.Response` in library API.
