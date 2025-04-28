@@ -27,7 +27,7 @@
 
 ## [v.2.0.0](https://github.com/johnjohndoe/sessionize/releases/tag/v.2.0.0)
 
-* Published: 2018-06-23
+* Published: 2019-06-23
 
 ### Changes
 
@@ -44,7 +44,7 @@
 
 ## [v.1.0.0](https://github.com/johnjohndoe/sessionize/releases/tag/v.1.0.0)
 
-* Published: 2017-09-27
+* Published: 2018-09-27
 
 ### Changes
 
