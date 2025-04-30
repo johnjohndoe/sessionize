@@ -1,7 +1,7 @@
 package info.metadude.kotlin.library.sessionize
 
 import com.squareup.moshi.Moshi
-import info.metadude.kotlin.library.sessionize.adapters.LocalDateTimeAdapter
+import info.metadude.kotlin.library.sessionize.adapters.ZonedDateTimeAdapter
 import okhttp3.Call
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -23,7 +23,7 @@ object Api : SessionizeApi {
 
     private fun provideMoshiBuilder(): Moshi {
         return Moshi.Builder()
-            .add(LocalDateTimeAdapter())
+            .add(ZonedDateTimeAdapter())
             .build()
     }
 

@@ -7,7 +7,7 @@ import okhttp3.OkHttpClient
 internal suspend fun main() {
     val repository = SimpleSessionizeRepository(
         baseUrl = "https://sessionize.com",
-        apiKey = "rxafxyj8",
+        apiKey = "oleuq4yu",
         callFactory = OkHttpClient.Builder().build(),
         api = Api,
     )

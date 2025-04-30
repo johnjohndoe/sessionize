@@ -6,6 +6,11 @@
 
 ### Changes
 
+* **API change:** Dates are now provides as zoned date time.
+  * Affected properties:
+    * `ConferenceDay#date`
+    * `Session#endsAt`
+    * `Session#startsAt`
 * **New:** Add `SimpleSessionizeRepository` in separate "sessionize-repositories" library artifact.
 * **Breaking changes:**
   * Rename `ApiModule` to `Api`.

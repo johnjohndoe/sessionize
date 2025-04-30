@@ -12,7 +12,7 @@ class ProductionApiTest {
 
     companion object {
         const val BASE_URL = "https://sessionize.com"
-        const val API_KEY = "rxafxyj8"
+        const val API_KEY = "oleuq4yu"
     }
 
     @Test
@@ -22,7 +22,7 @@ class ProductionApiTest {
             when (response.isSuccessful) {
                 true -> {
                     val conferenceDays = response.body()
-                    assertThat(conferenceDays).isNotNull
+                    assertThat(conferenceDays).isNotNull()
                     conferenceDays?.forEach { assertConferenceDay(it) }
                 }
 
