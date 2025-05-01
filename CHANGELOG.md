@@ -1,8 +1,8 @@
 # Sessionize changelog
 
-## NEXT
+## [v.4.0.0](https://github.com/johnjohndoe/sessionize/releases/tag/v.4.0.0)
 
-* Not published yet.
+* Published: 2025-05-02
 
 ### Changes
 
