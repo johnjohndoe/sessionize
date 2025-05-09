@@ -98,12 +98,13 @@ allprojects {
 }
 ```
 
-and to your application module `build.gradle`:
+and one of the following dependencies to your application module `build.gradle`:
 
 
 ```groovy
 dependencies {
     implementation "info.metadude.kotlin.library.sessionize:sessionize-base:$version"
+    implementation "info.metadude.kotlin.library.sessionize:sessionize-repositories:$version"
 }
 ```
 
